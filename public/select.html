@@ -1,0 +1,77 @@
+<html>
+<head>
+	<script type="text/javascript">
+    function goToNewPage()
+    {
+        var url = document.getElementById('place').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+</script>
+<style type="text/css">
+	html{
+		background-image: url('../assets/select-back.png');
+	    background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%; 
+	}
+	select{
+		margin-right: 15px;
+		background: white;
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-radius: 5px;
+		font-size: 20px;
+		font-family:"Papyrus", Times, fantasy;
+	}
+	.btn1,.date{
+		margin-right: 15px;
+		border:1px solid black;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-radius: 5px;
+		background: white;
+		font-family:"Papyrus", Times, fantasy;
+		font-size: 20px;
+	}
+	.btn1:hover{
+		color:blanchedalmond;
+		cursor: pointer;
+	}
+	select:hover,.date:hover{
+		cursor: pointer;
+		background: peachpuff;
+		color: brown;
+	}
+	.date::after{	
+		color:red;
+	}
+</style>
+</head>
+<body style="margin-top: 180px;">
+	<center>
+		<h1 style="color:brown;">WHERE DO YOU WANT TO GO?</h1>
+		<div id="select">
+		<form name="myform">
+			<select name="place" id="place" accesskey="target">
+				<option value='none' selected>Choose a place</option>
+				<option value="sirsi.html">Sirsi</option>
+				<option value="none">Murdeshwar</option>
+				<option value="none">Apsarakonda</option>
+				<option value="none">Om beach</option>
+				<option value="none">Yaana caves</option>
+				<option value="none">Honnavar</option>
+				<option value="none">Karwar</option>
+			</select>
+			<input placeholder="Select date" type="date" class="date">
+			<input type=button class="btn1" style="border-radius: 25px; background: indianred;" value="Search" onclick="goToNewPage()" />
+		</form>
+	</div>
+	</center>
+</body>
+</html>
